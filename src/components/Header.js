@@ -42,7 +42,7 @@ function Header() {
             colorScheme="green"
             onClick={() => window.open("https://google.com")}
           >
-            Get my Resume
+            My Resume
           </Button>
         </Box>
         <Image

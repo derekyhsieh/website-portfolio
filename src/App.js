@@ -7,12 +7,23 @@ import {
   VStack,
   HStack,
   Stack,
+  Button,
+  Center,
   Text,
+  Box,
+  Link,
   Image,
 } from "@chakra-ui/react";
-import { FaSun, FaMoon, FaGithub, FaLinkedin, FaLink } from "react-icons/fa";
+import {FaGithub, FaLinkedin, FaLink, FaSwift, FaApple } from "react-icons/fa";
+import {IoIosGlasses} from "react-icons/io"
+import {SiFirebase, SiSupabase} from "react-icons/si"
+import {GiPlanetCore, GiNetworkBars} from "react-icons/gi"
+import {GrStorage} from "react-icons/gr"
+import {BiNotification} from "react-icons/bi"
+import {SiNextdotjs} from "react-icons/si"
 import Header from "./components/Header";
 import ProjectContainer from "./components/Projects/ProjectContainer";
+import {BsArrowUpRight} from "react-icons/bs"
 import {
   ScrollContainer,
   ScrollPage,
@@ -73,12 +84,30 @@ function App() {
             <Header></Header>
           </Animator>
         </ScrollPage>
+        
         <ScrollPage page={1}>
+          <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
+            <VStack>
+            <Heading textAlign={"center"}>
+              Apple WWDC Swift Student Scholarship Winner
+              </Heading>
+              <Link color='blue.500' href="https://github.com/DerekHsiehDev/WWDC2022.git">
+                Sage: Winning Playground
+              </Link>
+           
+            
+            </VStack>
+            
+          </Animator>
+        </ScrollPage>
+
+        <ScrollPage page={2}>
           <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
             <ProjectContainer />
           </Animator>
         </ScrollPage>
-        <ScrollPage page={2}>
+
+        <ScrollPage page={3}>
           <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
             <HStack>
               <VStack>
@@ -86,9 +115,47 @@ function App() {
                   <Animator animation={MoveIn(-1000, 0)}>Arro Social</Animator>
                 </Heading>
                 <Spacer />
-                <Text>
+
+
+                <Text textAlign={"center"}>
                   <Animator animation={MoveIn(1000, 0)}>
-                    A social media platform that shares profits
+                    A social media platform that shares profits <br></br>
+                    Full time intern at Arro 
+
+                  <Text color={"gray.700"} mt={10}>
+                  <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        SwiftUI
+                      </Text>
+                      <FaSwift color="red" size={28}/>
+                    </HStack>
+                    </Center>
+                 
+
+                    <br></br>
+
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                    Firebase Auth 
+                      </Text>
+                      <SiFirebase color="orange" size={28}/>
+                    </HStack>
+                    </Center>
+
+                    <br></br>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                    Firestore DB 
+                      </Text>
+                      <SiFirebase color="orange" size={28}/>
+                    </HStack>
+                    </Center>
+                    
+                  </Text>
+
                   </Animator>
                 </Text>
               </VStack>
@@ -96,51 +163,81 @@ function App() {
                 <Image width="300px" src={arro} />
               </Animator>
             </HStack>
+            <Center mt={5}>
+          
+
+            <Link color='blue.500' href="https://testflight.apple.com/join/Vus0a1hp">
+              TestFlight Link
+              </Link>
+            </Center>
           </Animator>
         </ScrollPage>
         {/* opposite way */}
 
-        <ScrollPage page={3}>
+        <ScrollPage page={4}>
           <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
             <HStack>
-              <VStack>
+
                 <Heading>
                   <Animator animation={MoveIn(-1000, 0)}>
                     <Image width="300px" src={cfood} />
                   </Animator>
                 </Heading>
                 <Spacer />
-              </VStack>
+             
               <Animator animation={MoveIn(1000, 0)}>
-                <Heading>cFood</Heading>
-                <Text>
-                  <Animator animation={MoveIn(1000, 0)}>
-                    A social media platform that shares profits
-                  </Animator>
-                </Text>
-              </Animator>
-            </HStack>
-          </Animator>
-        </ScrollPage>
-
-        <ScrollPage page={4}>
-          <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-            <HStack>
               <VStack>
-                <Heading>
-                  <Animator animation={MoveIn(-1000, 0)}>Unpuzzle.net</Animator>
-                </Heading>
-                <Spacer />
-                <Text>
+                <Heading>cFood</Heading>
+                <Text textAlign={"center"}>
                   <Animator animation={MoveIn(1000, 0)}>
-                    A social media platform that shares profits
+                    Machine Learning Calorie Tracker that returns nutritional information
+                    <Box mt={10}>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        CoreML
+                      </Text>
+                      <FaApple color="black" size={28}/>
+                    </HStack>
+                    </Center>
+                 
+
+                    <br></br>
+
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        CoreData
+                      </Text>
+                      <GrStorage color="blue" size={28}/>
+                    </HStack>
+                    </Center>
+
+                    <br></br>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        Vision
+                      </Text>
+                      <IoIosGlasses color="green" size={28}/>
+                    </HStack>
+                    </Center>
+                    </Box>
                   </Animator>
                 </Text>
-              </VStack>
-              <Animator animation={MoveIn(1000, 0)}>
-                <Image width="300px" src={unpuzzle} />
+                
+                
+                </VStack>
               </Animator>
+            
             </HStack>
+            <Center mt={5}>
+              <Animator animatino={Fade()}>
+            <Link color='blue.500' href="https://testflight.apple.com/join/Vus0a1hp">
+              App Store Link
+              </Link>
+            </Animator>
+            </Center>
           </Animator>
         </ScrollPage>
 
@@ -149,21 +246,122 @@ function App() {
             <HStack>
               <VStack>
                 <Heading>
+                  <Animator animation={MoveIn(-1000, 0)}>Unpuzzle.net</Animator>
+                </Heading>
+                <Spacer />
+                <Text textAlign={"center"}>
+                  <Animator animation={MoveIn(1000, 0)}>
+                    Educational Web App for helping students with hard homework problems
+                    <Box mt={10}>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        NextJS
+                      </Text>
+                      <SiNextdotjs color="black" size={28}/>
+                    </HStack>
+                    </Center>
+                 
+
+                    <br></br>
+
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        Supabase
+                      </Text>
+                      <SiSupabase color="green" size={28}/>
+                    </HStack>
+                    </Center>
+
+                    <br></br>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        Networking
+                      </Text>
+                      <GiNetworkBars color="purple" size={28}/>
+                    </HStack>
+                    </Center>
+                    </Box>
+                  </Animator>
+                </Text>
+              </VStack>
+              <Animator animation={MoveIn(1000, 0)}>
+                <Image width="300px" src={unpuzzle} />
+              </Animator>
+            </HStack>
+            <Center mt={5}>
+            <Link color='blue.500' href="https://unpuzzle.net">
+              Website
+              </Link>
+        
+            </Center>
+            
+          </Animator>
+        </ScrollPage>
+
+        <ScrollPage page={6}>
+          <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
+            <HStack>
+              
+                <Heading>
                   <Animator animation={MoveIn(-1000, 0)}>
                     <Image width="300px" src={dorodoro} />
                   </Animator>
                 </Heading>
                 <Spacer />
-              </VStack>
+                <VStack>
+              <Text textAlign={"center"}>
               <Animator animation={MoveIn(1000, 0)}>
                 <Heading>dorodoro</Heading>
                 <Text>
                   <Animator animation={MoveIn(1000, 0)}>
-                    A social media platform that shares profits
+                    Gamified Pomodoro Studying Tracker
+                    <Box mt={10}>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        Notifications
+                      </Text>
+                      <BiNotification color="red" size={28}/>
+                    </HStack>
+                    </Center>
+                 
+
+                    <br></br>
+
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        Local Storage
+                      </Text>
+                      <GrStorage color="lightBlue" size={28}/>
+                    </HStack>
+                    </Center>
+
+                    <br></br>
+                    <Center>
+                    <HStack>
+                      <Text fontSize={"lg"}>
+                        Custom Modals
+                      </Text>
+                      <BsArrowUpRight color="brown" size={28}/>
+                    </HStack>
+                    </Center>
+                    </Box>
                   </Animator>
                 </Text>
               </Animator>
+              </Text>
+              </VStack>
             </HStack>
+            <Center mt={5}>
+
+              <Link color='blue.500' href="https://github.com/derekhsiehdev/dorodoro">
+                GitHub Repo
+              </Link>
+            </Center>
           </Animator>
         </ScrollPage>
       </ScrollContainer>
