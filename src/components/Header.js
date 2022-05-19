@@ -40,7 +40,11 @@ function Header() {
           <Button
             mt={8}
             colorScheme="green"
-            onClick={() => window.open("https://google.com")}
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/document/d/1IGP3jKaJdLHJzK_fp5FCmi8343qjxSqh8dAoly9Ek8k/edit?usp=sharing"
+              )
+            }
           >
             My Resume
           </Button>
