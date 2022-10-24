@@ -42,7 +42,7 @@ function Header() {
             colorScheme="green"
             onClick={() =>
               window.open(
-                "https://docs.google.com/document/d/1IGP3jKaJdLHJzK_fp5FCmi8343qjxSqh8dAoly9Ek8k/edit?usp=sharing"
+                "https://drive.google.com/file/d/1Dza9wRWgPaqCiIr1Pfb-2Y48weiJrYa4/view?usp=sharing"
               )
             }
           >
