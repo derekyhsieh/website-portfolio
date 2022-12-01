@@ -241,7 +241,7 @@ function App() {
           </Animator>
         </ScrollPage>
 
-        <ScrollPage page={6}>
+        <ScrollPage page={5}>
           <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
             <HStack>
               
