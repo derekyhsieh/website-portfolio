@@ -241,66 +241,6 @@ function App() {
           </Animator>
         </ScrollPage>
 
-        <ScrollPage page={5}>
-          <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-            <HStack>
-              <VStack>
-                <Heading>
-                  <Animator animation={MoveIn(-1000, 0)}>Unpuzzle.net</Animator>
-                </Heading>
-                <Spacer />
-                <Text textAlign={"center"}>
-                  <Animator animation={MoveIn(1000, 0)}>
-                    Educational Web App for helping students with hard homework problems
-                    <Box mt={10}>
-                    <Center>
-                    <HStack>
-                      <Text fontSize={"lg"}>
-                        NextJS
-                      </Text>
-                      <SiNextdotjs color="black" size={28}/>
-                    </HStack>
-                    </Center>
-                 
-
-                    <br></br>
-
-                    <Center>
-                    <HStack>
-                      <Text fontSize={"lg"}>
-                        Supabase
-                      </Text>
-                      <SiSupabase color="green" size={28}/>
-                    </HStack>
-                    </Center>
-
-                    <br></br>
-                    <Center>
-                    <HStack>
-                      <Text fontSize={"lg"}>
-                        Networking
-                      </Text>
-                      <GiNetworkBars color="purple" size={28}/>
-                    </HStack>
-                    </Center>
-                    </Box>
-                  </Animator>
-                </Text>
-              </VStack>
-              <Animator animation={MoveIn(1000, 0)}>
-                <Image width="300px" src={unpuzzle} />
-              </Animator>
-            </HStack>
-            <Center mt={5}>
-            <Link color='blue.500' href="https://unpuzzle.net">
-              Website
-              </Link>
-        
-            </Center>
-            
-          </Animator>
-        </ScrollPage>
-
         <ScrollPage page={6}>
           <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
             <HStack>
